@@ -12,13 +12,13 @@ contract DeployScript is Script {
 
         // Deploy implementation V1
         BoxImplementation implementation = new BoxImplementation();
-        
+
         // Deploy proxy with implementation
         TestVersionControlledProxy proxy = new TestVersionControlledProxy(address(implementation));
-        
+
         vm.stopBroadcast();
-        
+
         console.log("BoxImplementation deployed at:", address(implementation));
         console.log("VersionControlledProxy deployed at:", address(proxy));
     }
-} 
+}
