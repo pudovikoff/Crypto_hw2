@@ -19,7 +19,14 @@ The proxy maintains an array called `versionHistory` to store all available impl
 - **Rollback Capability**: The system can be reverted to any previous implementation
 - **Delegate Calls**: Function calls to the proxy are delegated to the current implementation
 
+## CI/CD
 
+This project uses GitHub Actions for continuous integration and test automation. The workflow runs the following checks:
+- Code formatting with `forge fmt`
+- Project build with `forge build`
+- Test execution with `forge test`
+
+This ensures that all code changes maintain the quality and functionality of the smart contracts.
 
 ### Deploy
 
