@@ -2,6 +2,8 @@
 
 ## Project Overview
 
+Note, this repository was created with wide use of LLMs and cursor.sh software.
+
 This repository implements a version control system for an upgradeable smart contract using a proxy pattern. The implementation consists of:
 
 - **TestVersionControlledProxy**: A proxy contract that delegates calls to the current implementation and manages version history
@@ -17,60 +19,7 @@ The proxy maintains an array called `versionHistory` to store all available impl
 - **Rollback Capability**: The system can be reverted to any previous implementation
 - **Delegate Calls**: Function calls to the proxy are delegated to the current implementation
 
-## Project Structure
 
-- `src/BoxImplementation.sol`: V1 implementation with basic functionality
-- `src/BoxImplementationV2.sol`: V2 implementation with enhanced functionality
-- `test/VersionControlledProxy.t.sol`: Contains both the proxy contract and tests
-- `script/Deploy.s.sol`: Script to deploy the V1 implementation and proxy
-- `script/Upgrade.s.sol`: Script to deploy the V2 implementation and upgrade the proxy
-
-## Foundry
-
-This project uses Foundry, a blazing fast toolkit for Ethereum application development written in Rust.
-
-Foundry consists of:
-
-- **Forge**: Ethereum testing framework
-- **Cast**: Swiss army knife for interacting with EVM smart contracts
-- **Anvil**: Local Ethereum node
-- **Chisel**: Solidity REPL
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
 
 ### Deploy
 
@@ -84,19 +33,6 @@ $ export PROXY_ADDRESS=<deployed_proxy_address>
 $ forge script script/Upgrade.s.sol:UpgradeScript --rpc-url <your_rpc_url> --broadcast -vvvv
 ```
 
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
 
 ### Interact with the contract
 
